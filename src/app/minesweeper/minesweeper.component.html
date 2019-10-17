@@ -1,0 +1,10 @@
+<p>minesweeper works!</p>
+
+<div class="row" *ngFor="let row of board">
+  <div class="col-sm" *ngFor="let field of row">
+    <div *ngIf="field.mine" style="color: red">
+      {{ field.score }}
+    </div>
+    <div *ngIf="!field.mine">{{ field.score }}</div>
+  </div>
+</div>
